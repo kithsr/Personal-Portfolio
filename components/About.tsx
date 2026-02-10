@@ -22,7 +22,7 @@ export default function About() {
             </p>
             <div className="flex gap-4 pt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/kithsr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
