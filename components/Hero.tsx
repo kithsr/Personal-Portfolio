@@ -7,8 +7,8 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-16 relative overflow-hidden"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-10 dark:opacity-5">
-        <div className="relative w-[600px] h-[600px] rounded-full overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center opacity-30 dark:opacity-20">
+        <div className="relative w-[700px] h-[700px] rounded-full overflow-hidden">
           <img
             src="/profile.jpg"
             alt="Profile"
