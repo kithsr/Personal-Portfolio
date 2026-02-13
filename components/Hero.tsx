@@ -2,9 +2,24 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-16"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-16 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-10 dark:opacity-5">
+        <div className="relative w-[600px] h-[600px] rounded-full overflow-hidden">
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              // Fallback if image doesn't exist
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
           Hi, I'm{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
