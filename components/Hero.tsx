@@ -8,11 +8,11 @@ export default function Hero() {
     >
       {/* Background Image */}
       <div className="absolute inset-0 flex items-center justify-center opacity-30 dark:opacity-20">
-        <div className="relative w-[700px] h-[700px] rounded-full overflow-hidden">
+        <div className="relative w-[700px] h-[700px]">
           <img
             src="/profile.jpg"
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
             onError={(e) => {
               // Fallback if image doesn't exist
               e.currentTarget.style.display = 'none';
