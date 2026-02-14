@@ -31,32 +31,32 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="min-h-screen py-20 bg-gray-50 dark:bg-gray-800 flex items-center">
+    <section id="projects" className="min-h-screen py-20 bg-blue-900 flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
           Featured Projects
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="bg-blue-950 border border-blue-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <div className="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
                 <span className="text-6xl">💻</span>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-blue-100 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm px-3 py-1 rounded-full"
+                      className="bg-blue-900 text-blue-100 text-sm px-3 py-1 rounded-full"
                     >
                       {tech}
                     </span>
@@ -65,13 +65,13 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <a
                     href={project.link}
-                    className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    className="text-blue-300 hover:underline font-medium"
                   >
                     Live Demo →
                   </a>
                   <a
                     href={project.github}
-                    className="text-gray-600 dark:text-gray-400 hover:underline font-medium"
+                    className="text-blue-200 hover:underline font-medium"
                   >
                     GitHub
                   </a>
