@@ -90,10 +90,10 @@ export default function Contact() {
             </a>
           </p>
         </div>
+        <footer className="mt-20 text-center text-gray-600 dark:text-gray-400">
+          <p>© 2026 Your Name. All rights reserved.</p>
+        </footer>
       </div>
-      <footer className="mt-20 text-center text-gray-600 dark:text-gray-400">
-        <p>© 2026 Your Name. All rights reserved.</p>
-      </footer>
     </section>
   );
 }
