@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center justify-center opacity-30 dark:opacity-20">
         <div className="relative w-[700px] h-[700px]">
           <img
-            src="/profile.jpg"
+            src="/profile-no-bg.png"
             alt="Profile"
             className="w-full h-full object-contain"
             onError={(e) => {
