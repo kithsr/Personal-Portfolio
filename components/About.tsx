@@ -5,12 +5,7 @@ export default function About() {
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-16">
           About Me
         </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="w-full h-96 bg-gradient-to-br from-blue-200 to-indigo-300 dark:from-blue-900 dark:to-indigo-900 rounded-lg flex items-center justify-center">
-              <span className="text-6xl">👨‍💻</span>
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               I'm a passionate developer with a love for creating beautiful and functional web applications. 
