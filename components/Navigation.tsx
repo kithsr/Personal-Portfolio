@@ -45,14 +45,14 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-sm">
+    <nav className="fixed w-full bg-blue-950/85 backdrop-blur-md z-50 shadow-sm border-b border-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <a 
               href="#home" 
               onClick={(e) => handleClick(e, "#home")}
-              className="text-2xl font-bold text-gray-900 dark:text-white"
+              className="text-2xl font-bold text-blue-100"
             >
               Portfolio
             </a>
@@ -68,8 +68,8 @@ export default function Navigation() {
                   onClick={(e) => handleClick(e, item.href)}
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     activeSection === item.href.replace("#", "")
-                      ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      ? "text-blue-300 border-b-2 border-blue-400"
+                      : "text-blue-100 hover:text-blue-300"
                   }`}
                 >
                   {item.name}
@@ -82,7 +82,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-blue-100 hover:text-blue-300"
             >
               <svg
                 className="h-6 w-6"
@@ -107,7 +107,7 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-950 border-t border-blue-900">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -115,8 +115,8 @@ export default function Navigation() {
                 onClick={(e) => handleClick(e, item.href)}
                 className={`block px-3 py-2 text-base font-medium ${
                   activeSection === item.href.replace("#", "")
-                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
-                    : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-blue-300 bg-blue-900/50"
+                    : "text-blue-100 hover:text-blue-300"
                 }`}
               >
                 {item.name}
