@@ -91,7 +91,7 @@ export default function Contact() {
           </p>
         </div>
         <footer className="mt-20 text-center text-blue-300">
-          <p>© 2026 Your Name. All rights reserved.</p>
+          <p>© 2026 A.W.Kithsara. All rights reserved.</p>
         </footer>
       </div>
     </section>
