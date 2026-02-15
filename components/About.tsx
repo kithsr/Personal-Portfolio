@@ -8,12 +8,12 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             <p className="text-lg text-blue-100 leading-relaxed">
-              I'm a passionate developer with a love for creating beautiful and functional web applications. 
-              With expertise in modern web technologies, I bring ideas to life through clean code and innovative solutions.
+              I'm a passionate developer focused on building clean, user-friendly, and high-performing digital products.
+              Using modern web technologies, I turn ideas into reliable solutions through thoughtful design and maintainable code.
             </p>
             <p className="text-lg text-blue-100 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open source, 
-              or sharing knowledge with the developer community.
+              Outside of development, I enjoy exploring emerging technologies, contributing to open source,
+              and sharing knowledge with the developer community. I'm also deeply interested in cybersecurity and machine learning.
             </p>
             <div className="flex gap-4 pt-4">
               <a
