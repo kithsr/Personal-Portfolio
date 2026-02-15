@@ -1,7 +1,7 @@
 export default function Projects() {
   const projects = [
     {
-      title: "ProcuraX",
+      title: "ProcuraX Mobile Application + Admin Dashboard",
       description: "A construction management system for International Construction Consortium (ICC) Pvt Ltd",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Flutter", "Node.js", "MongoDB", "Firebase"],
       link: "#",
