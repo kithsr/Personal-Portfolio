@@ -54,7 +54,7 @@ export default function Navigation() {
               onClick={(e) => handleClick(e, "#home")}
               className="text-2xl font-bold text-blue-100"
             >
-              Portfolio
+              Personal Portfolio
             </a>
           </div>
 
