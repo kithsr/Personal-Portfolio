@@ -22,9 +22,7 @@ export default function Hero() {
           <div className="relative z-10 max-w-md py-14 sm:py-16">
             <p className="text-yellow-400 text-lg sm:text-xl mb-2">Hi, I&apos;m</p>
             <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.95]">
-              A.W.
-              <br />
-              Kithsara
+              A.W.Kithsara
             </h1>
             <p className="mt-6 text-slate-300 text-xl sm:text-2xl">
               Full Stack Developer | Creative Problem Solver | Tech Enthusiast
