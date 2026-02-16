@@ -37,13 +37,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px] md:min-h-full bg-black">
+        <div className="relative min-h-[420px] md:min-h-full bg-[#030b21]">
           <Image
-            src="/profile.jpg"
+            src="/profile-no-bg.png"
             alt="A.W.Kithsara"
             fill
             priority
-            className="object-cover"
+            className="object-contain object-bottom brightness-100 contrast-100 saturate-105 drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-slate-950/80 via-slate-950/35 to-transparent" />
         </div>
