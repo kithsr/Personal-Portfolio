@@ -26,14 +26,24 @@ export default function Hero() {
               <br />
               Kithsara
             </h1>
-            <p className="mt-6 text-slate-300 text-xl sm:text-2xl">Full Stack Developer</p>
+            <p className="mt-6 text-slate-300 text-xl sm:text-2xl">
+              Full Stack Developer | Creative Problem Solver | Tech Enthusiast
+            </p>
 
-            <a
-              href="#contact"
-              className="inline-flex mt-8 rounded-full bg-yellow-400 px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-yellow-300"
-            >
-              Hire me
-            </a>
+            <div className="mt-8 flex gap-4 flex-wrap">
+              <a
+                href="#projects"
+                className="inline-flex rounded-full bg-yellow-400 px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-yellow-300"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex rounded-full border border-slate-500/70 bg-slate-900/30 px-8 py-3 text-sm font-semibold text-slate-100 transition hover:bg-slate-800/50"
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
         </div>
 
