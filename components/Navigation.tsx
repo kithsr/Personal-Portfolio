@@ -21,7 +21,6 @@ export default function Navigation() {
 
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "skills", "contact"];
-      const scrollPosition = window.scrollY + 100;
       const currentScrollY = window.scrollY;
 
       setIsScrolled(currentScrollY > 20);
@@ -34,13 +33,26 @@ export default function Navigation() {
 
       lastScrollY = currentScrollY;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
+      const viewportMarker = window.innerHeight * 0.35;
+      let currentActive = sections[0];
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const distance = Math.abs(section.getBoundingClientRect().top - viewportMarker);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            currentActive = sectionId;
+          }
         }
       }
+
+      if (window.innerHeight + currentScrollY >= document.body.scrollHeight - 4) {
+        currentActive = "contact";
+      }
+
+      setActiveSection(currentActive);
     };
 
     window.addEventListener("scroll", handleScroll);
