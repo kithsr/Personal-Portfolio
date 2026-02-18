@@ -13,10 +13,25 @@ export default function About() {
             </p>
             <p className="text-lg text-blue-100 leading-relaxed">
               Outside of development, I enjoy exploring emerging technologies, contributing to open source,
-              and sharing knowledge with the developer community. I completed my primary and secondary studies at Rahula College, Matara,
-              and completed the Foundation Programme at Informatics Institute of Technology (IIT Campus).
-              I am currently enrolled in a Computer Science degree at IIT, affiliated with the University of Westminster.
+              and sharing knowledge with the developer community.
             </p>
+            <div className="pt-2">
+              <h3 className="text-2xl font-semibold text-white mb-5">Education</h3>
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5 md:col-span-2">
+                  <p className="text-sm font-medium text-blue-300 mb-1">Primary & Secondary Studies</p>
+                  <p className="text-base text-blue-100 leading-relaxed">Rahula College, Matara</p>
+                </div>
+                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
+                  <p className="text-sm font-medium text-blue-300 mb-1">Foundation Programme</p>
+                  <p className="text-base text-blue-100 leading-relaxed">Informatics Institute of Technology (IIT Campus)</p>
+                </div>
+                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
+                  <p className="text-sm font-medium text-blue-300 mb-1">Current Degree</p>
+                  <p className="text-base text-blue-100 leading-relaxed">BSc (Hons) Computer Science at IIT, affiliated with the University of Westminster</p>
+                </div>
+              </div>
+            </div>
             <div className="flex gap-4 pt-4">
               <a
                 href="https://github.com/kithsr"
