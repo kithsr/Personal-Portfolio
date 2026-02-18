@@ -13,7 +13,9 @@ export default function About() {
             </p>
             <p className="text-lg text-blue-100 leading-relaxed">
               Outside of development, I enjoy exploring emerging technologies, contributing to open source,
-              and sharing knowledge with the developer community. I'm also deeply interested in cybersecurity and machine learning.
+              and sharing knowledge with the developer community. I completed my primary and secondary studies at Rahula College, Matara,
+              and completed the Foundation Programme at Informatics Institute of Technology (IIT Campus).
+              I am currently enrolled in a Computer Science degree at IIT, affiliated with the University of Westminster.
             </p>
             <div className="flex gap-4 pt-4">
               <a
