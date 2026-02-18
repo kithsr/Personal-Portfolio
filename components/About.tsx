@@ -8,7 +8,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             <p className="text-lg text-blue-100 leading-relaxed">
-              I'm a passionate developer focused on building clean, user-friendly, and high-performing digital products.
+              I&apos;m a passionate developer focused on building clean, user-friendly, and high-performing digital products.
               Using modern web technologies, I turn ideas into reliable solutions through thoughtful design and maintainable code.
             </p>
             <p className="text-lg text-blue-100 leading-relaxed">
