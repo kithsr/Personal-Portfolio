@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -15,9 +17,22 @@ export default function Navigation() {
   ];
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "skills", "contact"];
       const scrollPosition = window.scrollY + 100;
+      const currentScrollY = window.scrollY;
+
+      setIsScrolled(currentScrollY > 20);
+
+      if (currentScrollY <= 10) {
+        setIsNavVisible(true);
+      } else {
+        setIsNavVisible(currentScrollY < lastScrollY);
+      }
+
+      lastScrollY = currentScrollY;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -45,14 +60,24 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed w-full bg-blue-950/85 backdrop-blur-md z-50 shadow-sm border-b border-blue-900">
+    <nav
+      className={`fixed top-0 w-full backdrop-blur-md z-50 border-b transition-all duration-300 ${
+        isNavVisible ? "translate-y-0" : "-translate-y-full"
+      } ${
+        isScrolled
+          ? "bg-blue-950/95 shadow-lg border-blue-800"
+          : "bg-blue-950/70 shadow-sm border-blue-900"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <a 
               href="#home" 
               onClick={(e) => handleClick(e, "#home")}
-              className="text-2xl font-bold text-blue-100"
+              className={`font-bold text-blue-100 transition-all duration-300 ${
+                isScrolled ? "text-xl" : "text-2xl"
+              }`}
             >
               Personal Portfolio
             </a>
