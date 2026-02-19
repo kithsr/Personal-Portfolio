@@ -27,8 +27,8 @@ export default function About() {
                   <p className="text-base text-blue-100 leading-relaxed">Informatics Institute of Technology (IIT Campus)</p>
                 </div>
                 <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Current Degree</p>
-                  <p className="text-base text-blue-100 leading-relaxed">BSc (Hons) Computer Science at IIT, affiliated with the University of Westminster</p>
+                  <p className="text-sm font-medium text-blue-300 mb-1">Undergraduate</p>
+                  <p className="text-base text-blue-100 leading-relaxed">BSc (Hons) Computer Science - University of Westminster</p>
                 </div>
               </div>
             </div>
