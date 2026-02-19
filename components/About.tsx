@@ -54,7 +54,7 @@ export default function About() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/itz_kithsara._/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-200 hover:text-blue-300 transition-colors"
