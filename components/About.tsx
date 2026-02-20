@@ -1,4 +1,69 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+type EducationItem = {
+  id: "school" | "localUniversity" | "university";
+  label: string;
+  title: string;
+  institution: string;
+};
+
+const educationItems: EducationItem[] = [
+  {
+    id: "school",
+    label: "School",
+    title: "Primary & Secondary Studies",
+    institution: "Rahula College, Matara",
+  },
+  {
+    id: "localUniversity",
+    label: "Local University",
+    title: "Foundation Programme",
+    institution: "Informatics Institute of Technology (IIT Campus)",
+  },
+  {
+    id: "university",
+    label: "University",
+    title: "Undergraduate",
+    institution: "BSc (Hons) Computer Science - University of Westminster",
+  },
+];
+
 export default function About() {
+  const [imagePreviews, setImagePreviews] = useState<Record<string, string>>({});
+
+  const handleUpload = (
+    itemId: EducationItem["id"],
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const previewUrl = URL.createObjectURL(file);
+
+    setImagePreviews((prev) => {
+      const previousUrl = prev[itemId];
+      if (previousUrl) {
+        URL.revokeObjectURL(previousUrl);
+      }
+
+      return {
+        ...prev,
+        [itemId]: previewUrl,
+      };
+    });
+
+    event.target.value = "";
+  };
+
+  useEffect(() => {
+    return () => {
+      Object.values(imagePreviews).forEach((url) => URL.revokeObjectURL(url));
+    };
+  }, [imagePreviews]);
+
   return (
     <section id="about" className="min-h-screen py-20 bg-blue-950 flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,18 +83,51 @@ export default function About() {
             <div className="pt-2">
               <h3 className="text-2xl font-semibold text-white mb-5">Education</h3>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5 md:col-span-2">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Primary & Secondary Studies</p>
-                  <p className="text-base text-blue-100 leading-relaxed">Rahula College, Matara</p>
-                </div>
-                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Foundation Programme</p>
-                  <p className="text-base text-blue-100 leading-relaxed">Informatics Institute of Technology (IIT Campus)</p>
-                </div>
-                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Undergraduate</p>
-                  <p className="text-base text-blue-100 leading-relaxed">BSc (Hons) Computer Science - University of Westminster</p>
-                </div>
+                {educationItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className={`bg-blue-900/40 border border-blue-800 rounded-xl p-5 ${
+                      item.id === "school" ? "md:col-span-2" : ""
+                    }`}
+                  >
+                    <p className="text-sm font-medium text-blue-300 mb-1">{item.title}</p>
+                    <p className="text-base text-blue-100 leading-relaxed mb-4">{item.institution}</p>
+
+                    <div className="rounded-lg border border-blue-800 bg-blue-950/60 overflow-hidden">
+                      <div className="relative h-44 w-full bg-blue-950">
+                        {imagePreviews[item.id] ? (
+                          <Image
+                            src={imagePreviews[item.id]}
+                            alt={`${item.label} image`}
+                            fill
+                            unoptimized
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="h-full w-full flex items-center justify-center text-blue-300 text-sm">
+                            No image uploaded
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="p-3">
+                        <label
+                          htmlFor={`upload-${item.id}`}
+                          className="inline-block text-sm font-medium text-blue-200 hover:text-blue-100 cursor-pointer"
+                        >
+                          Upload {item.label} image
+                        </label>
+                        <input
+                          id={`upload-${item.id}`}
+                          type="file"
+                          accept="image/*"
+                          onChange={(event) => handleUpload(item.id, event)}
+                          className="hidden"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="flex gap-4 pt-4">
