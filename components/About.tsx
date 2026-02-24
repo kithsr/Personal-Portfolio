@@ -1,33 +1,3 @@
-import Image from "next/image";
-
-type EducationItem = {
-  id: "school" | "local-university" | "university";
-  title: string;
-  institution: string;
-  imagePath: string;
-};
-
-const educationItems: EducationItem[] = [
-  {
-    id: "school",
-    title: "Primary & Secondary Studies",
-    institution: "Rahula College, Matara",
-    imagePath: "/education/school.jpg",
-  },
-  {
-    id: "local-university",
-    title: "Foundation Programme",
-    institution: "Informatics Institute of Technology (IIT Campus)",
-    imagePath: "/education/local-university.jpg",
-  },
-  {
-    id: "university",
-    title: "Undergraduate",
-    institution: "BSc (Hons) Computer Science - University of Westminster",
-    imagePath: "/education/university.jpg",
-  },
-];
-
 export default function About() {
   return (
     <section id="about" className="min-h-screen py-20 bg-blue-950 flex items-center">
@@ -48,28 +18,18 @@ export default function About() {
             <div className="pt-2">
               <h3 className="text-2xl font-semibold text-white mb-5">Education</h3>
               <div className="grid gap-4 md:grid-cols-2">
-                {educationItems.map((item) => (
-                  <div
-                    key={item.id}
-                    className={`bg-blue-900/40 border border-blue-800 rounded-xl p-5 ${
-                      item.id === "school" ? "md:col-span-2" : ""
-                    }`}
-                  >
-                    <p className="text-sm font-medium text-blue-300 mb-1">{item.title}</p>
-                    <p className="text-base text-blue-100 leading-relaxed mb-4">{item.institution}</p>
-
-                    <div className="rounded-lg border border-blue-800 bg-blue-950/60 overflow-hidden">
-                      <div className="relative h-44 w-full bg-blue-950">
-                        <Image
-                          src={item.imagePath}
-                          alt={`${item.title} image`}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5 md:col-span-2">
+                  <p className="text-sm font-medium text-blue-300 mb-1">Primary & Secondary Studies</p>
+                  <p className="text-base text-blue-100 leading-relaxed">Rahula College, Matara</p>
+                </div>
+                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
+                  <p className="text-sm font-medium text-blue-300 mb-1">Foundation Programme</p>
+                  <p className="text-base text-blue-100 leading-relaxed">Informatics Institute of Technology (IIT Campus)</p>
+                </div>
+                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
+                  <p className="text-sm font-medium text-blue-300 mb-1">Undergraduate</p>
+                  <p className="text-base text-blue-100 leading-relaxed">BSc (Hons) Computer Science - University of Westminster</p>
+                </div>
               </div>
             </div>
             <div className="flex gap-4 pt-4">
