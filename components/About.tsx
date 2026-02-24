@@ -21,45 +21,66 @@ export default function About() {
               <h3 className="text-2xl font-semibold text-white mb-5">Education</h3>
               <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-4">
                 <div className="md:mt-0 md:w-56">
-                  <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
-                    <div className="relative h-44 w-full bg-blue-950">
-                      <Image
-                        src="/education/school.webp"
-                        alt="Royal College, Colombo"
-                        fill
-                        className="object-cover"
-                      />
+                  <a
+                    href="https://www.rahulacollege.lk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
+                      <div className="relative h-44 w-full bg-blue-950">
+                        <Image
+                          src="/education/school.webp"
+                          alt="Royal College, Colombo"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Rahula College, Matara</p>
+                    <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Rahula College, Matara</p>
+                  </a>
                 </div>
 
                 <div className="md:mt-10 md:w-56">
-                  <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
-                    <div className="relative h-44 w-full bg-blue-950">
-                      <Image
-                        src="/education/local-university.jpg"
-                        alt="Informatics Institute of Technology"
-                        fill
-                        className="object-contain"
-                      />
+                  <a
+                    href="https://www.iit.ac.lk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
+                      <div className="relative h-44 w-full bg-blue-950">
+                        <Image
+                          src="/education/local-university.webp"
+                          alt="Informatics Institute of Technology"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Informatics Institute of Technology</p>
+                    <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Informatics Institute of Technology</p>
+                  </a>
                 </div>
 
                 <div className="md:mt-20 md:w-56">
-                  <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
-                    <div className="relative h-44 w-full bg-blue-950">
-                      <Image
-                        src="/education/university.jpg"
-                        alt="University of Westminster, London"
-                        fill
-                        className="object-cover"
-                      />
+                  <a
+                    href="https://www.westminster.ac.uk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
+                      <div className="relative h-44 w-full bg-blue-950">
+                        <Image
+                          src="/education/university.jpg"
+                          alt="University of Westminster, London"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">University of Westminster, London</p>
+                    <p className="mt-3 text-center text-blue-100 text-lg leading-snug">University of Westminster, London</p>
+                  </a>
                 </div>
               </div>
             </div>
