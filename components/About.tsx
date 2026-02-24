@@ -31,7 +31,7 @@ export default function About() {
                       />
                     </div>
                   </div>
-                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Royal College, Colombo</p>
+                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Rahula College, Matara</p>
                 </div>
 
                 <div className="md:mt-10 md:w-56">
