@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about" className="min-h-screen py-20 bg-blue-950 flex items-center">
@@ -17,18 +19,47 @@ export default function About() {
             </p>
             <div className="pt-2">
               <h3 className="text-2xl font-semibold text-white mb-5">Education</h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5 md:col-span-2">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Primary & Secondary Studies</p>
-                  <p className="text-base text-blue-100 leading-relaxed">Rahula College, Matara</p>
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-4">
+                <div className="md:mt-0 md:w-56">
+                  <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
+                    <div className="relative h-44 w-full bg-blue-950">
+                      <Image
+                        src="/education/school.webp"
+                        alt="Royal College, Colombo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Royal College, Colombo</p>
                 </div>
-                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Foundation Programme</p>
-                  <p className="text-base text-blue-100 leading-relaxed">Informatics Institute of Technology (IIT Campus)</p>
+
+                <div className="md:mt-10 md:w-56">
+                  <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
+                    <div className="relative h-44 w-full bg-blue-950">
+                      <Image
+                        src="/education/local-university.jpg"
+                        alt="Informatics Institute of Technology"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">Informatics Institute of Technology</p>
                 </div>
-                <div className="bg-blue-900/40 border border-blue-800 rounded-xl p-5">
-                  <p className="text-sm font-medium text-blue-300 mb-1">Undergraduate</p>
-                  <p className="text-base text-blue-100 leading-relaxed">BSc (Hons) Computer Science - University of Westminster</p>
+
+                <div className="md:mt-20 md:w-56">
+                  <div className="rounded-2xl border border-blue-800 bg-blue-950/60 overflow-hidden">
+                    <div className="relative h-44 w-full bg-blue-950">
+                      <Image
+                        src="/education/university.jpg"
+                        alt="University of Westminster, London"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p className="mt-3 text-center text-blue-100 text-lg leading-snug">University of Westminster, London</p>
                 </div>
               </div>
             </div>
