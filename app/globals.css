@@ -23,8 +23,17 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background:
+    radial-gradient(circle at 8% 12%, rgba(56, 189, 248, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 8%, rgba(99, 102, 241, 0.2), transparent 30%),
+    linear-gradient(180deg, #020617 0%, #0a1230 45%, #111c43 100%);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #f8fbff;
 }
 
 .scroll-reveal {
@@ -51,5 +60,27 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply min-h-screen py-20 flex items-center;
+  }
+
+  .content-wrap {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center text-white mb-16;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-sky-300/15 bg-slate-900/45 backdrop-blur-md shadow-[0_12px_40px_rgba(2,6,23,0.5)];
+  }
+
+  .soft-chip {
+    @apply rounded-full border border-sky-300/20 bg-sky-400/10 px-3 py-1 text-sm text-sky-100;
   }
 }
