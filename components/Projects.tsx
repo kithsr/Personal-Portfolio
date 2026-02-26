@@ -31,32 +31,32 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="min-h-screen py-20 bg-blue-900 flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+    <section id="projects" className="section-shell">
+      <div className="content-wrap">
+        <h2 className="section-title">
           Featured Projects
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-blue-950 border border-blue-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="glass-panel overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(2,6,23,0.55)]"
             >
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-sky-500/80 via-cyan-500/70 to-indigo-500/80 flex items-center justify-center">
                 <span className="text-6xl">💻</span>
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-blue-100 mb-4">
+                <p className="text-slate-200 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-blue-900 text-blue-100 text-sm px-3 py-1 rounded-full"
+                      className="soft-chip"
                     >
                       {tech}
                     </span>
@@ -65,13 +65,13 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <a
                     href={project.link}
-                    className="text-blue-300 hover:underline font-medium"
+                    className="inline-flex rounded-full bg-sky-400/20 border border-sky-300/35 px-4 py-2 text-sky-100 font-medium hover:bg-sky-400/30 transition-colors"
                   >
                     Live Demo →
                   </a>
                   <a
                     href={project.github}
-                    className="text-blue-200 hover:underline font-medium"
+                    className="inline-flex rounded-full border border-slate-400/40 bg-slate-900/50 px-4 py-2 text-slate-200 font-medium hover:bg-slate-800/70 transition-colors"
                   >
                     GitHub
                   </a>
