@@ -25,15 +25,15 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-20 bg-blue-900 flex items-center">
+    <section id="contact" className="section-shell">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+        <h2 className="section-title">
           Get In Touch
         </h2>
-        <div className="bg-blue-950 border border-blue-800 rounded-lg shadow-lg p-8">
+        <div className="glass-panel p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-blue-100 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-slate-100 mb-2">
                 Name
               </label>
               <input
@@ -43,11 +43,11 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-blue-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-blue-900 text-white"
+                className="w-full px-4 py-2 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-transparent bg-slate-900/70 text-white"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-blue-100 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-slate-100 mb-2">
                 Email
               </label>
               <input
@@ -57,11 +57,11 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-blue-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-blue-900 text-white"
+                className="w-full px-4 py-2 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-transparent bg-slate-900/70 text-white"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-blue-100 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-slate-100 mb-2">
                 Message
               </label>
               <textarea
@@ -71,26 +71,26 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-2 border border-blue-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-blue-900 text-white resize-none"
+                className="w-full px-4 py-2 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-transparent bg-slate-900/70 text-white resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="w-full bg-gradient-to-r from-sky-400 to-cyan-300 hover:from-sky-300 hover:to-cyan-200 text-slate-900 font-semibold px-8 py-3 rounded-lg transition-colors shadow-[0_10px_30px_rgba(34,211,238,0.25)]"
             >
               Send Message
             </button>
           </form>
         </div>
         <div className="mt-12 text-center">
-          <p className="text-blue-200">
+          <p className="text-slate-300">
             Or reach out directly at{" "}
-            <a href="mailto:kithsarawitharana21@gmail.com" className="text-blue-300 hover:underline">
+            <a href="mailto:kithsarawitharana21@gmail.com" className="text-sky-300 hover:underline">
               kithsarawitharana21@gmail.com
             </a>
           </p>
         </div>
-        <footer className="mt-20 text-center text-blue-300">
+        <footer className="mt-20 text-center text-slate-400">
           <p>© 2026 A.W.Kithsara. All rights reserved.</p>
         </footer>
       </div>
