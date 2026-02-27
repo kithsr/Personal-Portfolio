@@ -13,6 +13,7 @@ export default function Navigation() {
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Extra-Curricular", href: "#extra-curricular" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -20,7 +21,7 @@ export default function Navigation() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "skills", "contact"];
+      const sections = ["home", "about", "projects", "skills", "extra-curricular", "contact"];
       const currentScrollY = window.scrollY;
 
       setIsScrolled(currentScrollY > 20);
