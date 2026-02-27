@@ -1,9 +1,17 @@
+import Image from "next/image";
+
 export default function ExtraCurricular() {
   const activities = [
     {
-      title: "University Coding Club",
+      title: "Blood Donation Program - IIT (2025)",
       description:
-        "Organize coding meetups, support peer learning sessions, and mentor junior students on web development fundamentals.",
+        "Organized a blood donation program at IIT in 2025 with fellow students, coordinating donor registration, awareness, and event logistics.",
+      images: [
+        "/activities/blood-donation-1.jpg",
+        "/activities/blood-donation-2.jpg",
+        "/activities/blood-donation-3.jpg",
+        "/activities/blood-donation-4.jpg",
+      ],
     },
     {
       title: "Hackathons & Tech Events",
@@ -29,6 +37,23 @@ export default function ExtraCurricular() {
             >
               <h3 className="text-2xl font-bold text-white mb-4">{activity.title}</h3>
               <p className="text-slate-200 leading-relaxed">{activity.description}</p>
+              {activity.images && (
+                <div className="mt-5 grid grid-cols-2 gap-3">
+                  {activity.images.map((src, imageIndex) => (
+                    <div
+                      key={src}
+                      className="relative h-32 overflow-hidden rounded-xl border border-sky-300/20 bg-slate-950/55"
+                    >
+                      <Image
+                        src={src}
+                        alt={`Blood donation activity image ${imageIndex + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
