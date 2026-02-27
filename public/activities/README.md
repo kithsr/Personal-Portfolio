@@ -15,3 +15,13 @@ File names:
 You can add more folders for other volunteer projects, for example:
 - `public/activities/project-name-1/`
 - `public/activities/project-name-2/`
+
+IIT Christmas event:
+
+Path:
+`public/activities/iit-christmas-event/`
+
+File names:
+- christmas-event-1.jpg
+- christmas-event-1.mp4
+- christmas-event-2.mp4

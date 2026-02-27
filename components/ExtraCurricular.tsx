@@ -15,9 +15,14 @@ export default function ExtraCurricular() {
       ],
     },
     {
-      title: "Hackathons & Tech Events",
+      title: "IIT Christmas Event Organizer & Coordinator",
       description:
-        "Participate in hackathons and community events to build rapid prototypes, collaborate in teams, and sharpen problem-solving skills.",
+        "Worked as an organizer and coordinator between lecturers and students for the Christmas event organized at IIT.",
+      images: ["/activities/iit-christmas-event/christmas-event-1.jpg"],
+      videos: [
+        "/activities/iit-christmas-event/christmas-event-1.mp4",
+        "/activities/iit-christmas-event/christmas-event-2.mp4",
+      ],
     },
     {
       title: "Volunteer & Community Work",
@@ -47,11 +52,26 @@ export default function ExtraCurricular() {
                     >
                       <Image
                         src={src}
-                        alt={`Blood donation activity image ${imageIndex + 1}`}
+                        alt={`${activity.title} image ${imageIndex + 1}`}
                         fill
                         className="object-cover"
                       />
                     </div>
+                  ))}
+                </div>
+              )}
+              {activity.videos && (
+                <div className="mt-5 grid gap-3">
+                  {activity.videos.map((src, videoIndex) => (
+                    <video
+                      key={src}
+                      controls
+                      preload="metadata"
+                      className="h-44 w-full rounded-xl border border-sky-300/20 bg-slate-950/55 object-cover"
+                      aria-label={`${activity.title} video ${videoIndex + 1}`}
+                    >
+                      <source src={src} type="video/mp4" />
+                    </video>
                   ))}
                 </div>
               )}
