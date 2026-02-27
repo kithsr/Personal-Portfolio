@@ -5,12 +5,13 @@ export default function ExtraCurricular() {
     {
       title: "Blood Donation Program - IIT (2025)",
       description:
-        "Organized a blood donation program at IIT in 2025 with fellow students, coordinating donor registration, awareness, and event logistics.",
+        "Volunteered in a blood donation program at IIT in 2025 with fellow students, coordinating donor registration, awareness, and event logistics.",
       images: [
-        "/activities/blood-donation-1.jpg",
-        "/activities/blood-donation-2.jpg",
-        "/activities/blood-donation-3.jpg",
-        "/activities/blood-donation-4.jpg",
+        "/activities/blood-donation/blood-donation-1.jpg",
+        "/activities/blood-donation/blood-donation-2.jpg",
+        "/activities/blood-donation/blood-donation-3.jpg",
+        "/activities/blood-donation/blood-donation-4.jpg",
+        "/activities/blood-donation/blood-donation-5.jpg",
       ],
     },
     {
