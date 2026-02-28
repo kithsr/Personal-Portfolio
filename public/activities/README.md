@@ -25,3 +25,14 @@ File names:
 - christmas-event-1.jpg
 - christmas-event-1.mp4
 - christmas-event-2.mp4
+
+IIT Halloween event:
+
+Path:
+`public/activities/iit-halloween-event/`
+
+Suggested file names:
+- halloween-event-1.jpg
+- halloween-event-2.jpg
+- halloween-event-1.mp4
+- halloween-event-2.mp4
