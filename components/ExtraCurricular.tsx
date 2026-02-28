@@ -41,6 +41,11 @@ export default function ExtraCurricular() {
       ],
     },
     {
+      title: "IIT Halloween Event - Main Organizing Committee",
+      description:
+        "Served on the main organizing committee for the IIT Halloween event, coordinating event planning, team collaboration, and on-ground execution.",
+    },
+    {
       title: "Volunteer & Community Work",
       description:
         "Contribute to student-led initiatives and community programs through planning, coordination, and digital support.",
