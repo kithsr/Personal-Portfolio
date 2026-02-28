@@ -1,6 +1,22 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function ExtraCurricular() {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedVideo(null);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   const activities = [
     {
       title: "Blood Donation Program - IIT (2025)",
@@ -63,15 +79,25 @@ export default function ExtraCurricular() {
               {activity.videos && (
                 <div className="mt-5 grid gap-3">
                   {activity.videos.map((src, videoIndex) => (
-                    <video
+                    <button
                       key={src}
-                      controls
-                      preload="metadata"
-                      className="h-44 w-full rounded-xl border border-sky-300/20 bg-slate-950/55 object-cover"
+                      type="button"
+                      onClick={() => setSelectedVideo(src)}
+                      className="group relative h-44 w-full overflow-hidden rounded-xl border border-sky-300/20 bg-slate-950/55"
                       aria-label={`${activity.title} video ${videoIndex + 1}`}
                     >
-                      <source src={src} type="video/mp4" />
-                    </video>
+                      <video
+                        preload="metadata"
+                        muted
+                        playsInline
+                        className="h-full w-full object-contain"
+                      >
+                        <source src={src} type="video/mp4" />
+                      </video>
+                      <span className="pointer-events-none absolute inset-0 grid place-items-center bg-slate-900/25 text-sm font-semibold text-white transition-colors duration-200 group-hover:bg-slate-900/40">
+                        Click to play
+                      </span>
+                    </button>
                   ))}
                 </div>
               )}
@@ -79,6 +105,35 @@ export default function ExtraCurricular() {
           ))}
         </div>
       </div>
+
+      {selectedVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl rounded-2xl border border-sky-300/20 bg-slate-950/95 p-3"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedVideo(null)}
+              className="absolute right-3 top-3 z-10 rounded-md bg-slate-900/75 px-3 py-1 text-sm font-semibold text-white"
+              aria-label="Close video"
+            >
+              Close
+            </button>
+            <video
+              controls
+              autoPlay
+              preload="metadata"
+              className="max-h-[80vh] w-full rounded-xl bg-black object-contain"
+            >
+              <source src={selectedVideo} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
