@@ -70,7 +70,9 @@ export default function ExtraCurricular() {
                   {activity.images.map((src, imageIndex) => (
                     <div
                       key={src}
-                      className="relative h-32 overflow-hidden rounded-xl border border-sky-300/20 bg-slate-950/55"
+                      className={`relative h-32 overflow-hidden rounded-xl border border-sky-300/20 bg-slate-950/55 ${
+                        activity.images?.length === 1 ? "col-span-2 mx-auto w-full max-w-56" : ""
+                      }`}
                     >
                       <Image
                         src={src}
