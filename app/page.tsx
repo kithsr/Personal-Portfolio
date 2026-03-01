@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 import ExtraCurricular from "@/components/ExtraCurricular";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
@@ -18,6 +19,9 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal>
         <Projects />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Skills />
       </ScrollReveal>
       <ScrollReveal>
         <ExtraCurricular />
