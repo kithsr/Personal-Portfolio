@@ -8,6 +8,11 @@ export default function Skills() {
     "Flutter",
     "Artificial Intelligence",
     "IT Security",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Next.js",
+    "Node.js",
   ];
 
   return (
