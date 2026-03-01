@@ -19,7 +19,7 @@ export default function ExtraCurricular() {
 
   const activities = [
     {
-      title: "Blood Donation Program - IIT (2025)",
+      title: "IIT Blood Donation Program",
       description:
         "Volunteered in a blood donation program at IIT in 2025 with fellow students, coordinating donor registration, awareness, and event logistics.",
       images: [
