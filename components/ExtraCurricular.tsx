@@ -50,12 +50,7 @@ export default function ExtraCurricular() {
         "/activities/iit-halloween-event/halloween-event-3.jpg",
       ],
       videos: ["/activities/iit-halloween-event/halloween-event-1.mp4"],
-    },
-    {
-      title: "Volunteer & Community Work",
-      description:
-        "Contribute to student-led initiatives and community programs through planning, coordination, and digital support.",
-    },
+    }
   ];
 
   return (
