@@ -5,11 +5,13 @@ import { useEffect, useState } from "react";
 
 export default function ExtraCurricular() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setSelectedVideo(null);
+        setSelectedImage(null);
       }
     };
 
@@ -68,8 +70,14 @@ export default function ExtraCurricular() {
               {activity.images && (
                 <div className="mt-5 grid grid-cols-2 gap-3">
                   {activity.images.map((src, imageIndex) => (
-                    <div
+                    <button
                       key={src}
+                      type="button"
+                      onClick={() => {
+                        setSelectedVideo(null);
+                        setSelectedImage(src);
+                      }}
+                      aria-label={`${activity.title} image ${imageIndex + 1}`}
                       className={`relative h-32 overflow-hidden rounded-xl border border-sky-300/20 bg-slate-950/55 ${
                         activity.images?.length === 1 ? "col-span-2 mx-auto w-full max-w-56" : ""
                       }`}
@@ -80,7 +88,7 @@ export default function ExtraCurricular() {
                         fill
                         className="object-cover"
                       />
-                    </div>
+                    </button>
                   ))}
                 </div>
               )}
@@ -90,7 +98,10 @@ export default function ExtraCurricular() {
                     <button
                       key={src}
                       type="button"
-                      onClick={() => setSelectedVideo(src)}
+                      onClick={() => {
+                        setSelectedImage(null);
+                        setSelectedVideo(src);
+                      }}
                       className="group relative h-44 w-full overflow-hidden rounded-xl border border-sky-300/20 bg-slate-950/55"
                       aria-label={`${activity.title} video ${videoIndex + 1}`}
                     >
@@ -139,6 +150,34 @@ export default function ExtraCurricular() {
             >
               <source src={selectedVideo} type="video/mp4" />
             </video>
+          </div>
+        </div>
+      )}
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="relative w-full max-w-6xl rounded-2xl border border-sky-300/20 bg-slate-950/95 p-3"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedImage(null)}
+              className="absolute right-3 top-3 z-10 rounded-md bg-slate-900/75 px-3 py-1 text-sm font-semibold text-white"
+              aria-label="Close image"
+            >
+              Close
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Selected activity image"
+              width={1600}
+              height={1000}
+              className="mx-auto h-auto max-h-[80vh] w-auto max-w-full rounded-xl object-contain"
+            />
           </div>
         </div>
       )}
