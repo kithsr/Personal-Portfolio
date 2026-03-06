@@ -8,8 +8,8 @@ export default function Projects() {
       github: "#"
     },
     {
-      title: "Task Management App",
-      description: "Real-time collaborative task management with drag-and-drop functionality",
+      title: "Business Website",
+      description: "Made a website for a business about eco-friendly toilet papers",
       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
       link: "#",
       github: "#"
