@@ -9,7 +9,7 @@ export default function Projects() {
     },
     {
       title: "Business Website",
-      description: "Made a website for a business about eco-friendly toilet papers",
+      description: "Designed and developed a modern business website for an eco-friendly toilet paper brand, highlighting sustainable products, brand values, and customer-friendly purchasing information.",
       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
       link: "#",
       github: "#"
