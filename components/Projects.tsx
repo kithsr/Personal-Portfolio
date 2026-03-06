@@ -15,9 +15,9 @@ export default function Projects() {
       github: "#"
     },
     {
-      title: "Weather Dashboard",
-      description: "Beautiful weather dashboard with forecasts and interactive maps",
-      technologies: ["Next.js", "Tailwind CSS", "Weather API", "Mapbox"],
+      title: "Sustainable Energy Web Project",
+      description: "Developed a collaborative website promoting Affordable and Clean Energy (UN Sustainable Development Goal 7), focusing on renewable energy awareness and sustainable solutions.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       link: "#",
       github: "#"
     }
