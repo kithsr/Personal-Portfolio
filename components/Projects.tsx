@@ -20,13 +20,6 @@ export default function Projects() {
       technologies: ["Next.js", "Tailwind CSS", "Weather API", "Mapbox"],
       link: "#",
       github: "#"
-    },
-    {
-      title: "Blog Platform",
-      description: "Modern blogging platform with markdown support and SEO optimization",
-      technologies: ["Next.js", "MDX", "Prisma", "PostgreSQL"],
-      link: "#",
-      github: "#"
     }
   ];
 
