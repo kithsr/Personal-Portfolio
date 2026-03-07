@@ -8,16 +8,16 @@ type Certification = {
 export default function Qualifications() {
   const certifications: Certification[] = [
     {
-      title: "Add your first certification",
-      issuer: "Certification Provider",
-      issued: "Month YYYY",
-      credentialUrl: "/certifications/your-certificate.pdf",
+      title: "CEFR B1 PET Preparation Course",
+      issuer: "Cambridge College",
+      issued: "07/11/2024",
+      credentialUrl: "/certifications/ccefr-b1-pet-preparation-course.jpg",
     },
     {
       title: "Add your second certification",
       issuer: "Certification Provider",
       issued: "Month YYYY",
-      credentialUrl: "/certifications/your-second-certificate.pdf",
+      credentialUrl: "/certifications/your-second-certificate.jpg",
     },
   ];
 
