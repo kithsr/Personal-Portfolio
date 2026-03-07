@@ -8,15 +8,15 @@ type Certification = {
 export default function Qualifications() {
   const certifications: Certification[] = [
     {
-      title: "CEFR B1 PET Preparation Course",
+      title: "CEFR B1 PET Preparation Certificate",
       issuer: "Cambridge College",
-      issued: "07/11/2024",
+      issued: "11 July 2024",
       credentialUrl: "/certifications/ccefr-b1-pet-preparation-course.jpg",
     },
     {
-      title: "Add your second certification",
-      issuer: "Certification Provider",
-      issued: "Month YYYY",
+      title: "Level 1 Certificate in ESOL International (Preliminary English Test - PET)",
+      issuer: "Cambridge College",
+      issued: "23 July 2024",
       credentialUrl: "/certifications/your-second-certificate.jpg",
     },
   ];
