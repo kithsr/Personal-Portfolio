@@ -19,6 +19,14 @@ export default function Qualifications() {
       issued: "23 July 2024",
       credentialUrl: "/certifications/PET Exam Cambridge.jpg",
     },
+    {
+      title:
+        "Machine Learning Specialization (Supervised Machine Learning: Regression and Classification)",
+      issuer: "Stanford Online | DeepLearning.AI",
+      issued: "30 December 2025",
+      credentialUrl:
+        "/certifications/machine-learning-specilization-regression-classification.png",
+    },
   ];
 
   return (
