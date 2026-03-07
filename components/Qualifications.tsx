@@ -27,6 +27,12 @@ export default function Qualifications() {
       credentialUrl:
         "/certifications/machine-learning-specilization-regression-classification.png",
     },
+    {
+      title: "Professional Certificate in Machine Learning",
+      issuer: "Informatics Institute of Technology",
+      issued: "24 January 2026",
+      credentialUrl: "/certifications/professional-certificate-machine-learning.jpg",
+    },
   ];
 
   return (
