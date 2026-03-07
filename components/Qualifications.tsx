@@ -17,7 +17,7 @@ export default function Qualifications() {
       title: "Level 1 Certificate in ESOL International (Preliminary English Test - PET)",
       issuer: "Cambridge College",
       issued: "23 July 2024",
-      credentialUrl: "/certifications/your-second-certificate.jpg",
+      credentialUrl: "/certifications/PET Exam Cambridge.jpg",
     },
   ];
 
