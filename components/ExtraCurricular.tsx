@@ -59,6 +59,14 @@ export default function ExtraCurricular() {
         "Represented the school football team in inter-school competitions, demonstrating teamwork, discipline, and leadership on and off the field.",
       images: ["/activities/school-football-team/school-football-team-1.jpg"],
     },
+    {
+      title: "Matara City FA vs Maldives Football Fixture",
+      description:
+        "Took part in an international football fixture representing Matara City Football Academy against a Maldives side, gaining valuable competitive exposure and team-play experience.",
+      images: [
+        "/activities/international-football-experience/international-football-experience-1.jpg",
+      ],
+    },
   ];
 
   return (
