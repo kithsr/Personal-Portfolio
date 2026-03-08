@@ -33,6 +33,13 @@ export default function Qualifications() {
       issued: "24 January 2026",
       credentialUrl: "/certifications/professional-certificate-machine-learning.jpg",
     },
+    {
+      title: "Understanding Artificial Intelligence",
+      issuer: "DataCamp",
+      issued: "31 August 2025",
+      credentialUrl:
+        "/certifications/understanding-artificial-intelligence-datacamp.png",
+    },
   ];
 
   return (
