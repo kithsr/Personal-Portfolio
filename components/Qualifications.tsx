@@ -47,6 +47,13 @@ export default function Qualifications() {
       credentialUrl:
         "/certifications/understanding-machine-learning-datacamp.png",
     },
+    {
+      title: "Python for Beginners",
+      issuer: "University of Moratuwa",
+      issued: "27 May 2025",
+      credentialUrl:
+        "/certifications/python-for-beginners-university-of-moratuwa.png",
+    },
   ];
 
   return (
