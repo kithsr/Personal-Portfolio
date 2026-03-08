@@ -54,6 +54,13 @@ export default function Qualifications() {
       credentialUrl:
         "/certifications/python-for-beginners-university-of-moratuwa.png",
     },
+    {
+      title: "Advanced Python",
+      issuer: "LinkedIn Learning",
+      issued: "21 April 2025",
+      credentialUrl:
+        "/certifications/advanced-python-linkedin-learning.png",
+    },
   ];
 
   return (
