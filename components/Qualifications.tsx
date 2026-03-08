@@ -40,6 +40,13 @@ export default function Qualifications() {
       credentialUrl:
         "/certifications/understanding-artificial-intelligence-datacamp.png",
     },
+    {
+      title: "Understanding Machine Learning",
+      issuer: "DataCamp",
+      issued: "02 November 2025",
+      credentialUrl:
+        "/certifications/understanding-machine-learning-datacamp.png",
+    },
   ];
 
   return (
