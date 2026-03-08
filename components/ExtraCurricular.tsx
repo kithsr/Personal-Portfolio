@@ -52,7 +52,13 @@ export default function ExtraCurricular() {
         "/activities/iit-halloween-event/halloween-event-3.jpg",
       ],
       videos: ["/activities/iit-halloween-event/halloween-event-1.mp4"],
-    }
+    },
+    {
+      title: "School Football Team Representation",
+      description:
+        "Represented the school football team in inter-school competitions, demonstrating teamwork, discipline, and leadership on and off the field.",
+      images: ["/activities/school-football-team/school-football-team-1.jpg"],
+    },
   ];
 
   return (
