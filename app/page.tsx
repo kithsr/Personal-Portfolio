@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -13,7 +14,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   const [progress, setProgress] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+  const [introStep, setIntroStep] = useState<"loading" | "photo" | "done">("loading");
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -32,18 +33,30 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (progress < 100) {
+    if (progress < 100 || introStep !== "loading") {
       return;
     }
 
-    const timeoutId = window.setTimeout(() => {
-      setIsLoading(false);
-    }, 300);
+    const toPhotoId = window.setTimeout(() => {
+      setIntroStep("photo");
+    }, 250);
 
-    return () => window.clearTimeout(timeoutId);
-  }, [progress]);
+    return () => window.clearTimeout(toPhotoId);
+  }, [progress, introStep]);
 
-  if (isLoading) {
+  useEffect(() => {
+    if (introStep !== "photo") {
+      return;
+    }
+
+    const toHomeId = window.setTimeout(() => {
+      setIntroStep("done");
+    }, 1300);
+
+    return () => window.clearTimeout(toHomeId);
+  }, [introStep]);
+
+  if (introStep === "loading") {
     return (
       <main className="fixed inset-0 z-50 flex min-h-screen items-center justify-center bg-slate-950">
         <div className="w-full max-w-md px-6">
@@ -59,6 +72,23 @@ export default function Home() {
           </div>
 
           <p className="mt-3 text-center text-xs text-slate-300">{progress}%</p>
+        </div>
+      </main>
+    );
+  }
+
+  if (introStep === "photo") {
+    return (
+      <main className="fixed inset-0 z-50 flex min-h-screen items-center justify-center overflow-hidden bg-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(56,189,248,0.18),transparent_38%),radial-gradient(circle_at_50%_100%,rgba(99,102,241,0.22),transparent_45%)]" />
+        <div className="relative h-[72vh] w-[80vw] max-w-3xl animate-[fadeIn_500ms_ease-out_forwards]">
+          <Image
+            src="/profile-no-bg.png"
+            alt="A.W.Kithsara"
+            fill
+            priority
+            className="object-contain drop-shadow-[0_26px_70px_rgba(14,116,144,0.45)]"
+          />
         </div>
       </main>
     );
