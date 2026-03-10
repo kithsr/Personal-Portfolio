@@ -75,12 +75,12 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full backdrop-blur-md z-50 border-b transition-all duration-300 ${
+      className={`fixed top-0 w-full backdrop-blur-xl z-50 border-b transition-all duration-300 ${
         isNavVisible ? "translate-y-0" : "-translate-y-full"
       } ${
         isScrolled
-          ? "bg-slate-950/85 shadow-[0_8px_30px_rgba(2,6,23,0.45)] border-sky-300/20"
-          : "bg-slate-950/45 shadow-sm border-sky-300/10"
+          ? "bg-slate-950/85 shadow-[0_14px_36px_rgba(2,6,23,0.55)] border-cyan-200/20"
+          : "bg-slate-950/45 shadow-sm border-cyan-200/10"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,8 +89,8 @@ export default function Navigation() {
             <a 
               href="#home" 
               onClick={(e) => handleClick(e, "#home")}
-              className={`font-bold tracking-wide text-transparent bg-gradient-to-r from-sky-200 via-cyan-200 to-indigo-200 bg-clip-text transition-all duration-300 ${
-                isScrolled ? "text-xl" : "text-2xl"
+              className={`hero-title text-transparent bg-gradient-to-r from-cyan-100 via-teal-100 to-sky-100 bg-clip-text transition-all duration-300 ${
+                isScrolled ? "text-xl" : "text-2xl sm:text-3xl"
               }`}
             >
               Personal Portfolio
@@ -99,16 +99,16 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-4 rounded-full border border-cyan-200/15 bg-slate-900/45 px-3 py-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
                     activeSection === item.href.replace("#", "")
-                      ? "text-sky-100 bg-sky-400/20 border border-sky-300/35"
-                      : "text-blue-100 hover:text-sky-200 hover:bg-slate-800/60 border border-transparent"
+                      ? "text-slate-950 bg-gradient-to-r from-cyan-300 to-teal-200 shadow-[0_6px_20px_rgba(34,211,238,0.32)]"
+                      : "text-blue-100 hover:text-cyan-100 hover:bg-slate-800/60 border border-transparent"
                   }`}
                 >
                   {item.name}
@@ -121,7 +121,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-blue-100 hover:text-sky-200 transition-colors"
+              className="rounded-lg border border-cyan-200/20 bg-slate-900/50 p-2 text-blue-100 hover:text-cyan-100 transition-colors"
             >
               <svg
                 className="h-6 w-6"
@@ -146,7 +146,7 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-950/95 border-t border-sky-300/15">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-950/95 border-t border-cyan-200/15">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -154,8 +154,8 @@ export default function Navigation() {
                 onClick={(e) => handleClick(e, item.href)}
                 className={`block rounded-lg px-3 py-2 text-base font-medium transition-colors ${
                   activeSection === item.href.replace("#", "")
-                    ? "text-sky-100 bg-sky-400/20"
-                    : "text-blue-100 hover:text-sky-200 hover:bg-slate-800/60"
+                    ? "text-slate-950 bg-gradient-to-r from-cyan-300 to-teal-200"
+                    : "text-blue-100 hover:text-cyan-100 hover:bg-slate-800/60"
                 }`}
               >
                 {item.name}

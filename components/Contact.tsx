@@ -26,11 +26,22 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-shell">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="content-wrap max-w-6xl">
         <h2 className="section-title">
           Get In Touch
         </h2>
-        <div className="glass-panel p-8">
+        <div className="glass-panel p-8 md:p-10 grid gap-10 md:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <h3 className="hero-title text-3xl text-white leading-tight">Let&apos;s build something meaningful.</h3>
+            <p className="mt-4 text-slate-200 leading-relaxed">
+              Whether it&apos;s a product idea, internship opportunity, or collaboration, I&apos;m open to conversations that create real value.
+            </p>
+            <div className="mt-6 space-y-3 text-slate-100/90">
+              <p className="rounded-2xl border border-cyan-200/15 bg-slate-900/45 px-4 py-3">Colombo, Sri Lanka</p>
+              <p className="rounded-2xl border border-cyan-200/15 bg-slate-900/45 px-4 py-3">Response time: usually within 24 hours</p>
+            </div>
+          </div>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-slate-100 mb-2">
@@ -43,7 +54,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-transparent bg-slate-900/70 text-white"
+                className="w-full px-4 py-3 border border-cyan-200/20 rounded-xl focus:ring-2 focus:ring-cyan-300/60 focus:border-transparent bg-slate-900/70 text-white"
               />
             </div>
             <div>
@@ -57,7 +68,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-transparent bg-slate-900/70 text-white"
+                className="w-full px-4 py-3 border border-cyan-200/20 rounded-xl focus:ring-2 focus:ring-cyan-300/60 focus:border-transparent bg-slate-900/70 text-white"
               />
             </div>
             <div>
@@ -71,12 +82,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-2 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-transparent bg-slate-900/70 text-white resize-none"
+                className="w-full px-4 py-3 border border-cyan-200/20 rounded-xl focus:ring-2 focus:ring-cyan-300/60 focus:border-transparent bg-slate-900/70 text-white resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-sky-400 to-cyan-300 hover:from-sky-300 hover:to-cyan-200 text-slate-900 font-semibold px-8 py-3 rounded-lg transition-colors shadow-[0_10px_30px_rgba(34,211,238,0.25)]"
+              className="w-full rounded-xl bg-gradient-to-r from-cyan-300 to-teal-200 hover:from-cyan-200 hover:to-teal-100 text-slate-950 font-semibold px-8 py-3 transition-colors shadow-[0_12px_30px_rgba(45,212,191,0.28)]"
             >
               Send Message
             </button>
@@ -85,7 +96,7 @@ export default function Contact() {
         <div className="mt-12 text-center">
           <p className="text-slate-300">
             Or reach out directly at{" "}
-            <a href="mailto:kithsarawitharana21@gmail.com" className="text-sky-300 hover:underline">
+            <a href="mailto:kithsarawitharana21@gmail.com" className="text-cyan-200 hover:underline">
               kithsarawitharana21@gmail.com
             </a>
           </p>

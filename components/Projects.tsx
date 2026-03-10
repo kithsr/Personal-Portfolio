@@ -33,16 +33,19 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="glass-panel overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(2,6,23,0.55)]"
+              className="glass-panel overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(2,6,23,0.58)]"
             >
-              <div className="h-48 bg-gradient-to-br from-sky-500/80 via-cyan-500/70 to-indigo-500/80 flex items-center justify-center">
-                <span className="text-6xl">💻</span>
+              <div className="relative h-44 overflow-hidden bg-gradient-to-br from-cyan-400/70 via-teal-400/50 to-sky-500/70">
+                <div className="absolute -left-10 top-8 h-28 w-28 rounded-full bg-white/20 blur-2xl" />
+                <div className="absolute right-6 top-6 rounded-full border border-white/35 bg-slate-900/25 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+                  Project {index + 1}
+                </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="hero-title text-2xl text-white mb-3 leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-slate-200 mb-4">
+                <p className="text-slate-100/90 mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -58,7 +61,7 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <a
                     href={project.link}
-                    className="inline-flex rounded-full bg-sky-400/20 border border-sky-300/35 px-4 py-2 text-sky-100 font-medium hover:bg-sky-400/30 transition-colors"
+                    className="inline-flex rounded-full bg-cyan-300/20 border border-cyan-200/35 px-4 py-2 text-cyan-100 font-medium hover:bg-cyan-300/30 transition-colors"
                   >
                     Live Demo →
                   </a>

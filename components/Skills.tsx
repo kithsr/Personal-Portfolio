@@ -16,18 +16,18 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="min-h-screen py-20 bg-blue-950 flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+    <section id="skills" className="section-shell">
+      <div className="content-wrap">
+        <h2 className="section-title">
           Skills
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {skills.map((skill) => (
             <div
               key={skill}
-              className="bg-blue-900 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="glass-panel p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(2,6,23,0.5)]"
             >
-              <div className="bg-blue-950 rounded-lg p-3 text-center text-blue-100 font-medium hover:bg-blue-800 transition-colors">
+              <div className="rounded-2xl border border-cyan-200/20 bg-slate-950/55 p-4 text-center text-cyan-50 font-semibold tracking-wide hover:bg-slate-900/65 transition-colors">
                 {skill}
               </div>
             </div>
