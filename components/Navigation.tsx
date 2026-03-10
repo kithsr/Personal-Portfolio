@@ -90,7 +90,7 @@ export default function Navigation() {
               href="#home" 
               onClick={(e) => handleClick(e, "#home")}
               className={`hero-title text-transparent bg-gradient-to-r from-cyan-100 via-teal-100 to-sky-100 bg-clip-text transition-all duration-300 ${
-                isScrolled ? "text-xl" : "text-2xl sm:text-3xl"
+                isScrolled ? "text-base sm:text-xl" : "text-lg sm:text-2xl"
               }`}
             >
               Personal Portfolio

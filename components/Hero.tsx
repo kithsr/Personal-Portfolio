@@ -17,14 +17,14 @@ export default function Hero() {
             }}
           />
 
-          <div className="relative z-10 max-w-xl py-14 sm:py-16">
+          <div className="relative z-10 max-w-xl py-10 sm:py-14 md:py-16">
             <p className="inline-flex rounded-full border border-cyan-200/30 bg-cyan-300/10 px-4 py-1 text-sm sm:text-base text-cyan-100 mb-5 subtle-ring">
               Hi, I&apos;m
             </p>
-            <h1 className="hero-title text-white text-5xl sm:text-6xl md:text-7xl leading-[0.92] drop-shadow-[0_12px_30px_rgba(2,6,23,0.45)]">
+            <h1 className="hero-title text-white text-4xl sm:text-6xl md:text-7xl leading-[0.92] drop-shadow-[0_12px_30px_rgba(2,6,23,0.45)]">
               A.W.Kithsara
             </h1>
-            <p className="mt-6 text-slate-100/95 text-xl sm:text-2xl leading-relaxed max-w-lg">
+            <p className="mt-5 text-slate-100/95 text-lg sm:text-2xl leading-relaxed max-w-lg">
               Full Stack Developer | Creative Problem Solver | Tech Enthusiast
             </p>
 
@@ -34,16 +34,16 @@ export default function Hero() {
               <span className="soft-chip">AI/ML Enthusiast</span>
             </div>
 
-            <div className="mt-8 flex gap-4 flex-wrap">
+            <div className="mt-7 flex gap-3 sm:gap-4 flex-wrap">
               <a
                 href="#projects"
-                className="inline-flex rounded-full bg-gradient-to-r from-cyan-300 to-teal-200 px-8 py-3 text-sm font-semibold text-slate-950 shadow-[0_10px_28px_rgba(45,212,191,0.32)] transition hover:scale-[1.02] hover:from-cyan-200 hover:to-teal-100"
+                className="inline-flex rounded-full bg-gradient-to-r from-cyan-300 to-teal-200 px-6 sm:px-8 py-3 text-sm font-semibold text-slate-950 shadow-[0_10px_28px_rgba(45,212,191,0.32)] transition hover:scale-[1.02] hover:from-cyan-200 hover:to-teal-100"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="inline-flex rounded-full border border-cyan-200/30 bg-slate-900/45 px-8 py-3 text-sm font-semibold text-slate-100 transition hover:scale-[1.02] hover:bg-slate-800/70"
+                className="inline-flex rounded-full border border-cyan-200/30 bg-slate-900/45 px-6 sm:px-8 py-3 text-sm font-semibold text-slate-100 transition hover:scale-[1.02] hover:bg-slate-800/70"
               >
                 Get In Touch
               </a>
@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px] md:min-h-full overflow-hidden">
+        <div className="relative min-h-[360px] sm:min-h-[420px] md:min-h-full overflow-hidden">
           <div className="absolute left-1/2 top-16 h-56 w-56 -translate-x-1/2 rounded-full bg-cyan-300/20 blur-3xl float-soft" />
           <Image
             src="/profile-no-bg.png"

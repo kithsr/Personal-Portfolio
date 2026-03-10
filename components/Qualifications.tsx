@@ -76,7 +76,7 @@ export default function Qualifications() {
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-sky-300/25 bg-sky-400/10 text-xl">
                 🏅
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">{certification.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">{certification.title}</h3>
               <p className="text-slate-200 mb-1">{certification.issuer}</p>
               <p className="text-sky-100/90 mb-5">Issued: {certification.issued}</p>
               <a

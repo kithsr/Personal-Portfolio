@@ -84,7 +84,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="https://github.com/kithsr"
                 target="_blank"

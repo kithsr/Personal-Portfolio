@@ -79,10 +79,10 @@ export default function ExtraCurricular() {
               key={index}
               className="glass-panel p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(2,6,23,0.55)]"
             >
-              <h3 className="text-2xl font-bold text-white mb-4">{activity.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 leading-snug">{activity.title}</h3>
               <p className="text-slate-200 leading-relaxed">{activity.description}</p>
               {activity.images && (
-                <div className="mt-5 grid grid-cols-2 gap-3">
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {activity.images.map((src, imageIndex) => (
                     <button
                       key={src}

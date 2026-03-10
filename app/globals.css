@@ -37,6 +37,7 @@ body {
   font-family: var(--font-body), sans-serif;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -104,7 +105,7 @@ body::before {
 
 @layer components {
   .section-shell {
-    @apply min-h-screen py-24 flex items-center;
+    @apply min-h-screen py-16 sm:py-20 md:py-24 flex items-center;
   }
 
   .content-wrap {
@@ -112,7 +113,7 @@ body::before {
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl text-center text-white mb-16;
+    @apply text-3xl sm:text-4xl md:text-5xl text-center text-white mb-10 sm:mb-12 md:mb-16;
     font-family: var(--font-display), sans-serif;
     letter-spacing: -0.03em;
     line-height: 0.95;

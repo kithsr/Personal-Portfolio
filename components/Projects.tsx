@@ -58,7 +58,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   <a
                     href={project.link}
                     className="inline-flex rounded-full bg-cyan-300/20 border border-cyan-200/35 px-4 py-2 text-cyan-100 font-medium hover:bg-cyan-300/30 transition-colors"
