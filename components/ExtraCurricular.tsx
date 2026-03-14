@@ -125,7 +125,7 @@ export default function ExtraCurricular() {
                         playsInline
                         className="h-full w-full object-contain"
                       >
-                        <source src={src} type="video/mp4" />
+                        <source src={`${process.env.NEXT_PUBLIC_BASE_PATH}${src}`} type="video/mp4" />
                       </video>
                       <span className="pointer-events-none absolute inset-0 grid place-items-center bg-slate-900/25 text-sm font-semibold text-white transition-colors duration-200 group-hover:bg-slate-900/40">
                         Click to play
@@ -162,7 +162,7 @@ export default function ExtraCurricular() {
               preload="metadata"
               className="max-h-[80vh] w-full rounded-xl bg-black object-contain"
             >
-              <source src={selectedVideo} type="video/mp4" />
+              <source src={`${process.env.NEXT_PUBLIC_BASE_PATH}${selectedVideo}`} type="video/mp4" />
             </video>
           </div>
         </div>

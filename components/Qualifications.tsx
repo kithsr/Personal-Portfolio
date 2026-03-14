@@ -80,7 +80,7 @@ export default function Qualifications() {
               <p className="text-slate-200 mb-1">{certification.issuer}</p>
               <p className="text-sky-100/90 mb-5">Issued: {certification.issued}</p>
               <a
-                href={certification.credentialUrl}
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH}${certification.credentialUrl}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex rounded-full bg-sky-400/20 border border-sky-300/35 px-4 py-2 text-sky-100 font-medium hover:bg-sky-400/30 transition-colors"
