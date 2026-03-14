@@ -8,7 +8,8 @@ const nextConfig = {
   basePath: `/${repo}`,
   assetPrefix: `/${repo}/`,
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./imageLoader.ts",
   },
   env: {
     NEXT_PUBLIC_BASE_PATH: `/${repo}`,
