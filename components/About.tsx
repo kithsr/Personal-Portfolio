@@ -30,7 +30,7 @@ export default function About() {
                     <div className="rounded-2xl border border-sky-300/20 bg-slate-950/55 overflow-hidden shadow-[0_10px_30px_rgba(2,6,23,0.45)] transition-transform hover:-translate-y-1">
                       <div className="relative h-44 w-full bg-slate-950">
                         <Image
-                          src="/education/school.webp"
+                          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/education/school.webp`}
                           alt="Royal College, Colombo"
                           fill
                           className="object-cover"
@@ -51,7 +51,7 @@ export default function About() {
                     <div className="rounded-2xl border border-sky-300/20 bg-slate-950/55 overflow-hidden shadow-[0_10px_30px_rgba(2,6,23,0.45)] transition-transform hover:-translate-y-1">
                       <div className="relative h-44 w-full bg-slate-950">
                         <Image
-                          src="/education/local-university.webp"
+                          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/education/local-university.webp`}
                           alt="Informatics Institute of Technology"
                           fill
                           className="object-contain"
@@ -72,7 +72,7 @@ export default function About() {
                     <div className="rounded-2xl border border-sky-300/20 bg-slate-950/55 overflow-hidden shadow-[0_10px_30px_rgba(2,6,23,0.45)] transition-transform hover:-translate-y-1">
                       <div className="relative h-44 w-full bg-slate-950">
                         <Image
-                          src="/education/university.jpg"
+                          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/education/university.jpg`}
                           alt="University of Westminster, London"
                           fill
                           className="object-cover"

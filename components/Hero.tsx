@@ -91,7 +91,7 @@ export default function Hero() {
         <div className="relative min-h-[360px] sm:min-h-[420px] md:min-h-full overflow-hidden">
           <div className="absolute left-1/2 top-16 h-56 w-56 -translate-x-1/2 rounded-full bg-cyan-300/20 blur-3xl float-soft" />
           <Image
-            src="/profile-no-bg.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/profile-no-bg.png`}
             alt="A.W.Kithsara"
             fill
             priority

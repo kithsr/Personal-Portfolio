@@ -19,27 +19,28 @@ export default function ExtraCurricular() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const activities = [
     {
       title: "IIT Blood Donation Program",
       description:
         "Volunteered in a blood donation program at IIT in 2025 with fellow students, coordinating donor registration, awareness, and event logistics.",
       images: [
-        "/activities/blood-donation/blood-donation-1.jpg",
-        "/activities/blood-donation/blood-donation-2.jpg",
-        "/activities/blood-donation/blood-donation-3.jpg",
-        "/activities/blood-donation/blood-donation-4.jpg",
-        "/activities/blood-donation/blood-donation-5.jpg",
+        `${BASE}/activities/blood-donation/blood-donation-1.jpg`,
+        `${BASE}/activities/blood-donation/blood-donation-2.jpg`,
+        `${BASE}/activities/blood-donation/blood-donation-3.jpg`,
+        `${BASE}/activities/blood-donation/blood-donation-4.jpg`,
+        `${BASE}/activities/blood-donation/blood-donation-5.jpg`,
       ],
     },
     {
       title: "IIT Christmas Event Organizer & Coordinator",
       description:
         "Worked as an organizer and coordinator between lecturers and students for the Christmas event organized at IIT.",
-      images: ["/activities/iit-christmas-event/christmas-event-1.jpg"],
+      images: [`${BASE}/activities/iit-christmas-event/christmas-event-1.jpg`],
       videos: [
-        "/activities/iit-christmas-event/christmas-event-1.mp4",
-        "/activities/iit-christmas-event/christmas-event-2.mp4",
+        `${BASE}/activities/iit-christmas-event/christmas-event-1.mp4`,
+        `${BASE}/activities/iit-christmas-event/christmas-event-2.mp4`,
       ],
     },
     {
@@ -47,24 +48,24 @@ export default function ExtraCurricular() {
       description:
         "Served on the main organizing committee for the IIT Halloween event, coordinating event planning, team collaboration, and on-ground execution.",
       images: [
-        "/activities/iit-halloween-event/halloween-event-1.jpg",
-        "/activities/iit-halloween-event/halloween-event-2.jpg",
-        "/activities/iit-halloween-event/halloween-event-3.jpg",
+        `${BASE}/activities/iit-halloween-event/halloween-event-1.jpg`,
+        `${BASE}/activities/iit-halloween-event/halloween-event-2.jpg`,
+        `${BASE}/activities/iit-halloween-event/halloween-event-3.jpg`,
       ],
-      videos: ["/activities/iit-halloween-event/halloween-event-1.mp4"],
+      videos: [`${BASE}/activities/iit-halloween-event/halloween-event-1.mp4`],
     },
     {
       title: "School Football Team Representation",
       description:
         "Represented the school football team in inter-school competitions, demonstrating teamwork, discipline, and leadership on and off the field.",
-      images: ["/activities/school-football-team/school-football-team-1.jpg"],
+      images: [`${BASE}/activities/school-football-team/school-football-team-1.jpg`],
     },
     {
       title: "Matara City FA vs Maldives Football Fixture",
       description:
         "Took part in an international football fixture representing Matara City Football Academy against a Maldives side, gaining valuable competitive exposure and team-play experience.",
       images: [
-        "/activities/international-football-experience/international-football-experience-1.jpg",
+        `${BASE}/activities/international-football-experience/international-football-experience-1.jpg`,
       ],
     },
   ];
@@ -125,7 +126,7 @@ export default function ExtraCurricular() {
                         playsInline
                         className="h-full w-full object-contain"
                       >
-                        <source src={`${process.env.NEXT_PUBLIC_BASE_PATH}${src}`} type="video/mp4" />
+                        <source src={src} type="video/mp4" />
                       </video>
                       <span className="pointer-events-none absolute inset-0 grid place-items-center bg-slate-900/25 text-sm font-semibold text-white transition-colors duration-200 group-hover:bg-slate-900/40">
                         Click to play
@@ -162,7 +163,7 @@ export default function ExtraCurricular() {
               preload="metadata"
               className="max-h-[80vh] w-full rounded-xl bg-black object-contain"
             >
-              <source src={`${process.env.NEXT_PUBLIC_BASE_PATH}${selectedVideo}`} type="video/mp4" />
+              <source src={selectedVideo} type="video/mp4" />
             </video>
           </div>
         </div>
