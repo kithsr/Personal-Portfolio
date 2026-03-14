@@ -17,11 +17,9 @@ jobs:
           node-version: '18'
       - run: npm ci
       - run: npx next build
-      - run: npx next export
-      - name: Add base href for repo subpath
+      - name: Verify exported files
         run: |
-          REPO_PATH="/Personal-Portfolio/"
-          find out -type f -name '*.html' -print0 | xargs -0 sed -i "s|<head>|<head><base href=\"${REPO_PATH}\">|g"
+          if [ -d out ]; then ls -la out | sed -n '1,10p'; else echo "out/ not found"; exit 1; fi
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
