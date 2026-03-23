@@ -20,6 +20,13 @@ export default function Projects() {
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "#",
       github: "#"
+    },
+    {
+      title: "SriLanka Weather App",
+      description: "Real-time Sri Lanka weather app with 7-day forecasts and district search, deployed to production.",
+      technologies: ["React", "Vite", "Tailwind CSS", "JavaScript", "REST APIs", "Git", "Vercel"],
+      link: "#",
+      github: "#"
     }
   ];
 
