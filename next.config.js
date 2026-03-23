@@ -2,16 +2,17 @@
 
 /** @type {import('next').NextConfig} */
 const repo = "Personal-Portfolio";
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}/`,
+  basePath: isProd ? `/${repo}` : "",
+  assetPrefix: isProd ? `/${repo}/` : "",
   images: {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: `/${repo}`,
+    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repo}` : "",
   },
 };
 
