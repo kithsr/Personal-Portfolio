@@ -74,7 +74,7 @@ export default function ExtraCurricular() {
     <section id="extra-curricular" className="section-shell">
       <div className="content-wrap">
         <h2 className="section-title">Extra-Curricular Activities</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {activities.map((activity, index) => (
             <div
               key={index}

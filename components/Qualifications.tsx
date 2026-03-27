@@ -67,7 +67,7 @@ export default function Qualifications() {
     <section id="qualifications" className="section-shell">
       <div className="content-wrap">
         <h2 className="section-title">Qualifications & Certifications</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-8">
           {certifications.map((certification) => (
             <article
               key={certification.title}

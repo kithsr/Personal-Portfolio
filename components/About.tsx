@@ -8,7 +8,7 @@ export default function About() {
           About Me
         </h2>
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-6 glass-panel p-8 md:p-10">
+          <div className="space-y-6 glass-panel p-5 sm:p-8 md:p-10">
             <p className="text-lg text-slate-100 leading-relaxed">
               I&apos;m a passionate developer focused on building clean, user-friendly, and high-performing digital products.
               Using modern web technologies, I turn ideas into reliable solutions through thoughtful design and maintainable code.

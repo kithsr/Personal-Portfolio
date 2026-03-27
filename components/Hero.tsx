@@ -97,7 +97,7 @@ export default function Hero() {
             priority
             className="object-contain object-bottom brightness-105 contrast-105 saturate-115 drop-shadow-[0_20px_55px_rgba(8,145,178,0.42)]"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-slate-950/85 via-slate-950/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-l from-slate-950/85 via-slate-950/40 to-transparent" />
         </div>
       </div>
     </section>

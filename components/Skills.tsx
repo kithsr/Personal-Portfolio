@@ -21,7 +21,7 @@ export default function Skills() {
         <h2 className="section-title">
           Skills
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {skills.map((skill) => (
             <div
               key={skill}

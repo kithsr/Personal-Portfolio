@@ -30,7 +30,7 @@ export default function Contact() {
         <h2 className="section-title">
           Get In Touch
         </h2>
-        <div className="glass-panel p-8 md:p-10 grid gap-10 md:grid-cols-[0.85fr_1.15fr]">
+        <div className="glass-panel p-5 sm:p-8 md:p-10 grid gap-8 md:gap-10 md:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h3 className="hero-title text-3xl text-white leading-tight">Let&apos;s build something meaningful.</h3>
             <p className="mt-4 text-slate-200 leading-relaxed">
