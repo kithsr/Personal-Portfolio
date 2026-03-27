@@ -43,7 +43,7 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen pt-16">
       <div className="mx-auto min-h-[calc(100vh-4rem)] max-w-7xl grid grid-cols-1 md:grid-cols-2">
-        <div className="relative flex items-center px-8 sm:px-12 lg:px-16">
+        <div className="relative flex items-center px-8 sm:px-12 lg:px-16 bg-[#060d1e] md:bg-transparent">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/15 via-transparent to-teal-400/20" />
           <div
             className="pointer-events-none absolute inset-0 opacity-30"
